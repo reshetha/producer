@@ -1,0 +1,12 @@
+package com.capgemini.orderapp.entity;
+
+public class lineItem {
+	private int id;
+	private int quantity;
+	private Product product;
+	
+	
+	
+	
+
+}

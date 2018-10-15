@@ -1,0 +1,72 @@
+package com.capgemini.orderapp.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.orderapp.entity.LineItem;
+import com.capgemini.orderapp.entity.Order;
+import com.capgemini.orderapp.repository.OrderRepository;
+import com.capgemini.orderapp.service.OrderService;
+@Service
+public class OrderServiceImpl implements OrderService {
+
+	@Autowired
+	OrderRepository orderRepository;
+	@Override
+	public Order getOrders(Order order) {
+		
+			return orderRepository.save(order);
+			
+	}
+
+	@Override
+	public Order getOrders(int orderId) {
+		
+		
+		return orderRepository.save(orderId);
+	
+		
+	}
+
+	@Override
+	public void submitOrder(Order order) {
+		return orderRepository.
+		
+
+	}
+
+	@Override
+	public void deleteOrder(int orderId) {
+		return orderRepository.save
+		
+	}
+
+	@Override
+	public void cancelOrder(int orderId) {
+		
+	}
+
+	@Override
+	public void addLineItem(LineItem Item) {
+		
+		
+	}
+
+	@Override
+	public void removeLineItem(LineItem Item) {
+		
+		
+	}
+
+	@Override
+	public List<LineItem> getLineItems() {
+		
+		return null;
+	}
+
+	
+	}
+
+

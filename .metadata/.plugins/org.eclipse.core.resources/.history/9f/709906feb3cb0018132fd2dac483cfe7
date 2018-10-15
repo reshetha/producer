@@ -1,0 +1,49 @@
+package com.capgemini.customer.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+
+import javax.persistence.Table;
+@Entity
+@Table(name = "customers")
+
+public class Customer {
+	@OneToMany
+	
+	private int customerId;
+	private String customerfirstName;
+	private String customerLastName;
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Customer(int customerId, String customerfirstName, String customerLastName) {
+		super();
+		this.customerId = customerId;
+		this.customerfirstName = customerfirstName;
+		this.customerLastName = customerLastName;
+	}
+	public int getCustomerId() {
+		return customerId;
+	}
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+	public String getCustomerfirstName() {
+		return customerfirstName;
+	}
+	public void setCustomerfirstName(String customerfirstName) {
+		this.customerfirstName = customerfirstName;
+	}
+	public String getCustomerLastName() {
+		return customerLastName;
+	}
+	public void setCustomerLastName(String customerLastName) {
+		this.customerLastName = customerLastName;
+	}
+	
+	
+	
+	
+
+}

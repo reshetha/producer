@@ -1,0 +1,5 @@
+package com.capgemini.orderapp.entity;
+
+public class Customer {
+
+}

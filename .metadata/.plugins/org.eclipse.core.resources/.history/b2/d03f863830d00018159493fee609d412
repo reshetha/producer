@@ -1,0 +1,5 @@
+package com.mycart.shopping.website.controller;
+
+public class WebsiteController {
+
+}

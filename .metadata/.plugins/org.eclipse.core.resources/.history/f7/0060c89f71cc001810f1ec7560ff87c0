@@ -1,0 +1,15 @@
+package com.capgemini.orderapp.service;
+
+import com.capgemini.orderapp.entity.Order;
+
+public interface OrderService {
+	
+	
+	public double getOrders(Order order);
+	public int getOrders(int orderId);
+	public void submitOrder(Order order);
+	public void updateOrder(Order order);
+	public int deleteOrder(int orderId);
+	public int cancelOrder(int orderId);
+
+}

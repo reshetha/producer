@@ -1,0 +1,11 @@
+package com.capgemini.orderapp.service;
+
+import com.capgemini.orderapp.entity.Order;
+
+public interface LineItemService
+{
+	public Order getOrders(Order order);
+	public Order getOrders(Order order);
+	public Order getOrders(Order order);
+
+}

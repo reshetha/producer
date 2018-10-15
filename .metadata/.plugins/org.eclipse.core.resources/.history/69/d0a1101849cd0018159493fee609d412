@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body bgcolor="marblewhite">
+<h1>product</h1><hr>
+
+<form:label path="productName">productName:</form:label>
+<form:input path="productName"/><br>
+
+<form:label path="employeeName">Employee Name:</form:label>
+<form:input path="employeeName"/><br>
+
+<form:label path="employeeDepartment">Employee Department:</form:label>
+<form:input path="employeeDepartment"/><br>
+
+
+
+
+
+
+</body>
+</html>

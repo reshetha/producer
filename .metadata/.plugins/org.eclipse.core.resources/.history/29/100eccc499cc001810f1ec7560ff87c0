@@ -1,0 +1,71 @@
+package com.capgemini.orderapp.controller;
+
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.capgemini.orderapp.entity.LineItem;
+import com.capgemini.orderapp.entity.Order;
+import com.capgemini.orderapp.service.OrderService;
+
+@RestController
+public class OrderController {
+	@Autowired
+	private OrderService orderService;
+
+	private HashMap<Integer, Set<LineItem>> Items;
+
+	public OrderController() {
+		Items = new HashMap<>();
+	}
+
+	@PostMapping("/cart/{customerId}")
+	public ResponseEntity<Set<LineItem>> addToCart(@RequestBody LineItem item, @PathVariable int customerId) {
+		Set<LineItem> sampleItem = Items.get(customerId);
+		if (sampleItem == null) {
+			sampleItem = new HashSet<>();
+			sampleItem.add(item);
+			Items.put(customerId, sampleItem);
+		} else {
+			sampleItem.add(item);
+			Items.put(customerId, sampleItem);
+		}
+		return new ResponseEntity<Set<LineItem>>(sampleItem, HttpStatus.OK);
+	}
+
+
+	@PostMapping("/order")
+	public ResponseEntity<Order> submitOrder(@RequestBody Order order) {
+		ResponseEntity<Order> responseEntity = new ResponseEntity<Order>(orderService.submitOrder(order),
+				HttpStatus.OK);
+		return responseEntity;
+	}
+}
+	
+	/*@GetMapping("/order/{customerId}")
+	public ResponseEntity<Set<LineItem>> getLineItems(@PathVariable int customerId) {
+		Set<LineItem> tempSet = orderService.getLineItems(customerId);
+		return new ResponseEntity<Set<LineItem>>(tempSet, HttpStatus.OK);
+	}
+
+	@DeleteMapping("/order/{customerId}")
+	public ResponseEntity<Set<LineItem>> removeLineItem(@PathVariable int customerId, @RequestBody LineItem item) {
+		orderService.removeLineItem(item, customerId);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+
+	@GetMapping("/order/submitorder/{customerId}")
+	public ResponseEntity<Order> submitOrder(@PathVariable int customerId) {
+		return new ResponseEntity<Order>(orderService.submitOrder(customerId), HttpStatus.OK);
+
+	}*/
+}	
+}

@@ -1,0 +1,54 @@
+package com.capgemini.customer.service.impl;
+
+import java.util.List;
+
+import com.capgemini.customer.entity.Customer;
+import com.capgemini.customer.exception.AuthenticationFailedException;
+import com.capgemini.customer.exception.CustomerNotFoundException;
+import com.capgemini.customer.service.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService {
+
+	@Override
+	public Customer addCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer authentication(Customer customer) throws CustomerNotFoundException, AuthenticationFailedException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerById(int customerId) throws CustomerNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Customer getCustomerByEmail(String customerEmail) throws CustomerNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Customer> getAllCustomers() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteCustomer(Customer customer) throws CustomerNotFoundException {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public Customer editCustomer(Customer customer) throws CustomerNotFoundException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

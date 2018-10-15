@@ -1,0 +1,17 @@
+package com.capgemini.customer.entity;
+
+import org.springframework.data.annotation.Id;
+
+public class Customer {
+	
+	
+	@Id
+	private int customerId;
+	private String customerFirstName;
+	private String customerLastName;
+	private String customerEmail;
+	private String customerAddress;
+	private String customerPassword;
+	private Address address;
+	
+}

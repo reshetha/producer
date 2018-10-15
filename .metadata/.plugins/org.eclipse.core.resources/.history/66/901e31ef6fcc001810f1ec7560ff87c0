@@ -1,0 +1,58 @@
+package com.capgemini.orderapp.entity;
+
+import java.util.Date;
+import java.util.List;
+
+public class Order {
+	
+	private int orderId;
+	private float total;
+	private Date date;
+	private Customer customer;
+	private List <LineItem> lineItem;
+	
+	
+	public Order() {
+		super();
+	}
+	public Order(int orderId, float total, Date date, Customer customer) {
+		super();
+		this.orderId = orderId;
+		this.total = total;
+		this.date = date;
+		this.customer = customer;
+	}
+	public int getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+	public float getTotal() {
+		return total;
+	}
+	public void setTotal(float total) {
+		this.total = total;
+	}
+	public Date getDate() {
+		return date;
+	}
+	public void setDate(Date date) {
+		this.date = date;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
+	}
+	@Override
+	public String toString() {
+		return "Order [orderId=" + orderId + ", total=" + total + ", date=" + date + ", customer=" + customer + "]";
+	}
+	
+	
+	
+	
+
+}

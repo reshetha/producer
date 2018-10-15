@@ -1,0 +1,5 @@
+package com.mycart.shopping.website.entity;
+
+public class Order {
+
+}

@@ -1,0 +1,15 @@
+package com.capgemini.orderapp.entity;
+
+import java.util.HashMap;
+
+public class lineItem {
+	private int id;
+	private int quantity;
+	private Product product;
+	
+	 HashMap<Product,Product> order = new HashMap<>(); 
+	 
+	
+	
+
+}

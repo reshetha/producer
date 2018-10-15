@@ -1,0 +1,20 @@
+package com.mycart.shopping.website.entity;
+
+import java.time.LocalDate;
+import java.util.List;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+public class Order {
+	private int orderId;
+	private double total;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	private LocalDate date;
+	private int customerId;
+	private String status;
+	private List<Item> items;
+	
+	
+	
+
+}

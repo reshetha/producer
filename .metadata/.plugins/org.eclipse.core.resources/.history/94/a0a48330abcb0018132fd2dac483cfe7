@@ -1,0 +1,11 @@
+package com.capgemini.customer.entity;
+
+public class customer {
+	
+	private int customerId;
+	private String customerfirstName;
+	private String customerLastName;
+	
+	
+
+}

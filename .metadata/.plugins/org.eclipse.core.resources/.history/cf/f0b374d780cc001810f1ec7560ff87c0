@@ -1,0 +1,22 @@
+package com.capgemini.orderapp.service;
+
+import java.util.List;
+
+import com.capgemini.orderapp.entity.LineItem;
+import com.capgemini.orderapp.entity.Order;
+
+public interface OrderService {
+	
+	
+	public Order addToCart(Order order);
+	public Order getOrders(int orderId);
+	public void submitOrder(Order order);
+	public void deleteOrder(int orderId);
+	public void cancelOrder(int orderId);
+	public void addLineItem(LineItem Item);
+	public void removeLineItem(LineItem Item);
+	List <LineItem> getLineItems();
+	
+	
+
+}

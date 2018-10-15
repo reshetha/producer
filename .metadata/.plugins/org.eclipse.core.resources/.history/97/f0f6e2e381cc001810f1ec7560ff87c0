@@ -1,0 +1,77 @@
+package com.capgemini.orderapp.service.impl;
+
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.capgemini.orderapp.entity.LineItem;
+import com.capgemini.orderapp.entity.Order;
+import com.capgemini.orderapp.repository.OrderRepository;
+import com.capgemini.orderapp.service.OrderService;
+@Service
+public class OrderServiceImpl implements OrderService {
+	private HashMap<Integer, Set<LineItem>> itemCart = new HashMap<>();
+	@Autowired
+	OrderRepository orderRepository;
+	@Override
+	public Set<Order> getOrders(int customerId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Order getOrder(int orderId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public void submitOrder(Order order) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void deleteOrder(int orderId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void cancelOrder(int orderId) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void addLineItem(LineItem Item, int customerId) {
+		Set<LineItem> tempSet = itemCart.get(customerId);
+		if (tempSet == null) {
+			tempSet = new HashSet<>();
+			tempSet.add(Item);
+			itemCart.put(customerId, tempSet);
+		} else {
+			tempSet.add(Item);
+			itemCart.put(customerId, tempSet);
+		}
+	}
+		
+	
+	@Override
+	public void removeLineItem(LineItem Item int customerId) {
+		Set<LineItem> tempSet = itemCart.get(customerId);
+		if (tempSet != null) {
+			tempSet.remove(item);
+			itemCart.put(customerId, tempSet);
+		}
+
+	}
+		
+	
+	@Override
+	public Set<LineItem> getLineItems() {
+		// TODO Auto-generated method stub
+		return null;
+	}}
+	
+	
